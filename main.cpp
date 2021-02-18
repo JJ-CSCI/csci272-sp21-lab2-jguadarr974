@@ -8,8 +8,26 @@
 enum class Compass {N, S, W, E};
 
 // Write your code here
-class GPS {
+class GPS { 
+double latitude;
+Compass latitudeDirection;
+double longitude;
+Compass longitudeDirection;
 
+
+public:
+void Compass(int N,int S)
+{
+  if(double latitude>0.0&& double latitude<90.0)
+    latitude=Compass::N;
+
+  else 
+    {
+    throw invalid_argument("Out of range");}
+
+}
+double getLatitude(){return latitude;}
+double getLongitude(){return longitude;}
 };
 
 //------------------------------
